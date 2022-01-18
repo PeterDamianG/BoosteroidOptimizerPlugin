@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Boosteroid Optimizer Plugin",
+  "short_name": "Btr Opt",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/bo16.png",
+      "32": "/images/bo32.png",
+      "48": "/images/bo48.png",
+      "128": "/images/bo128.png"
+    }
+  },
+  "description": "An optimizer boosteroid extension. Getting useful features.",
+  "icons": {
+    "16": "/images/bo16.png",
+    "32": "/images/bo32.png",
+    "48": "/images/bo48.png",
+    "128": "/images/bo128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "permissions": ["storage", "activeTab", "scripting"]
+}
