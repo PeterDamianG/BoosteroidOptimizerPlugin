@@ -25,9 +25,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*cloud.boosteroid.com/static/streaming/*"],
+      "matches": ["https://cloud.boosteroid.com/static/streaming/*"],
       "js": ["noafk.js"]
     }
   ],
-  "permissions": ["scripting", "activeTab"]
+  "permissions": ["declarativeContent"]
 }
