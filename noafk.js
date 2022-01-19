@@ -4,14 +4,14 @@ const MutationObserver =
 // Make a function to close the afk popup.
 const closePopUp = () => {
   const elementButton = document.querySelector('#confirm_btn');
-  if (elementButton) elementButton.click();
+  if (elementButton) {
+    elementButton.click();
+    console.log('Closed popup afk system.');
+  }
 };
 // Make a function to run observer.
 const observeApp = () => {
-  appObserver = new MutationObserver(() => {
-    closePopUp();
-    console.log('Closed popup afk system.');
-  });
+  appObserver = new MutationObserver(() => closePopUp());
   appObserver.observe(document.body, {
     childList: true
   });
