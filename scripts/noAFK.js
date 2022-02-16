@@ -2,23 +2,19 @@
 const MutationObserver =
   window.MutationObserver || window.WebKitMutationObserver;
 // Make a function to close the afk popup.
-const closePopUp = () => {
+function closePopUp() {
   const elementButton = document.querySelector('#confirm_btn');
   if (elementButton) {
     elementButton.click();
     console.log('Closed popup afk system.');
   }
-};
+}
 // Make a function to run observer.
-const observeApp = () => {
-  appObserver = new MutationObserver(() => closePopUp());
-  appObserver.observe(document.body, {
+function noAFK() {
+  appObserverAFK = new MutationObserver(() => closePopUp());
+  appObserverAFK.observe(document.body, {
     childList: true
   });
-};
-// Notify in console we use a B.O.P and version.
-console.log(
-  `Boosteriod Optimizer Plugin v${chrome.runtime.getManifest().version}`
-);
-// Run the observer.
-observeApp();
+}
+// Run function.
+noAFK();
