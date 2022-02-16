@@ -33,5 +33,11 @@
       ]
     }
   ],
+  "web_accessible_resources": [
+    {
+      "resources": ["scripts/eventHandler.js"],
+      "matches": ["https://cloud.boosteroid.com/*"]
+    }
+  ],
   "permissions": ["declarativeContent", "storage"]
 }
