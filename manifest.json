@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Boosteroid Optimizer Plugin",
   "short_name": "Btr Opt",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An optimizer boosteroid extension. Getting useful features.",
   "author": "Peter DG",
   "icons": {
@@ -26,8 +26,12 @@
   "content_scripts": [
     {
       "matches": ["https://cloud.boosteroid.com/static/streaming/*"],
-      "js": ["main.js"]
+      "js": [
+        "main.js",
+        "scripts/noAFK.js",
+        "scripts/noFullScreenExperimental.js"
+      ]
     }
   ],
-  "permissions": ["declarativeContent"]
+  "permissions": ["declarativeContent", "storage"]
 }
